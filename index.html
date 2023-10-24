@@ -3,60 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DropDown Navigation</title>
+    <title>오버상세설명</title>
     <style>
-      @import url('http://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+      @import url('https://fonts.googleapit.com/css?family=Raleway$dispaly=swap');
       body {
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Raleway', sans-serif;
         color: #222;
         line-height: 1.5em;
+        font-weight: 300;
+        margin: 0;
       }
       a {
         color: #222;
         text-decoration: none;
       }
-      .dropdown {
+      .items {
         border: 1px solid;
-        width: 250px;
-      }
-      .dropdown-btn {
-        width: inherit;
-        padding: 10px;
-        font-size: 18px;
-        background-color: yellowgreen;
-        color: #fff;
-        border: none;
-        outline: none;
-        cursor: pointer;
-      }
-      .dropdown-submenu {
-        display: none;
-        width: 250px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-      }
-      .dropdown-submenu a {
-        display: block;
-        padding: 7px;
         text-align: center;
-        .dropdown-submenu a:hover {
-          background-color: #eee;
-        }
       }
-      .dropdown:hover .dropdown-submenu {
-        display: block;
+      .item {
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        position: relative;
+      }
+      .caption {
+        width: 300px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+        padding-top: 40px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .caption a {
+        color: #fff;
+        background-color: teal;
+        padding: 7px;
+        border-radius: 3px;
+      }
+      .caption a:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      .item:hover .caption {
+        opacity: 1;
       }
     </style>
   </head>
   <body>
-    <div class="dropdown">
-      <button class="dropdown-btn">Real Estate type</button>
-      <div class="dropdown-submenu">
-        <a href="#none">All</a>
-        <a href="#none">One room</a>
-        <a href="#none">1.5 rooms</a>
-        <a href="#none">Two Room</a>
-        <a href="#none">officetel</a>
-        <a href="#none">Aprtment</a>
+    <div class="items">
+      <div class="item">
+        <img src="Markup/cat.png" alt="" style="width: 200px; height: auto" />
+        <div class="caption">
+          <h2>Rirakuma doll 25cm</h2>
+          <p>
+            The owner of the most popular and cute looks Rilakkuma ~! Rilakkuma
+            giant - It is size sale to small size.
+          </p>
+          <p>Price : <s>$12</s> -> $10</p>
+          <a href="">View detail</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Markup/cat.png" alt="" style="width: 200px; height: auto" />
+        <div class="caption">
+          <h2>Rirakuma doll 25cm</h2>
+          <p>
+            The owner of the most popular and cute looks Rilakkuma ~! Rilakkuma
+            giant - It is size sale to small size.
+          </p>
+          <p>Price : <s>$12</s> -> $10</p>
+          <a href="">View detail</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Markup/cat.png" alt="" style="width: 200px; height: auto" />
+        <div class="caption">
+          <h2>Rirakuma doll 25cm</h2>
+          <p>
+            The owner of the most popular and cute looks Rilakkuma ~! Rilakkuma
+            giant - It is size sale to small size.
+          </p>
+          <p>Price : <s>$12</s> -> $10</p>
+          <a href="">View detail</a>
+        </div>
       </div>
     </div>
   </body>
