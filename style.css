@@ -1,89 +1,51 @@
-/* Google Web Fonts CDN */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  color: #fff;
-  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  color: #222;
   line-height: 1.5em;
   font-weight: 300;
   margin: 0;
-  background-color: #222;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 a {
   color: #222;
   text-decoration: none;
 }
 
-.items {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-.item {
-  width: 300px;
-  height: 200px;
-  display: inline-block;
+.app-ui {
+  width: 340px;
+  height: 640px;
+  transform: rotate(-30deg) skewX(20deg) scale(0.7);
   position: relative;
-  margin: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  background-color: #ddd;
 }
-.front,
-.back {
+.app-ui:hover {
+  box-shadow: -50px 100px 60px rgba(0, 0, 0, 0.3);
+}
+.app-ui img {
   position: absolute;
   transition: 0.5s;
-  top: 0;
 }
-.front {
-  background-color: #333;
-  text-align: center;
-  height: inherit;
-  width: 100%;
-  z-index: 1;
-  border-radius: 5px 5px 0 0;
+.app-ui:hover img:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 0.2;
 }
-.item:hover .front img {
-  animation: ani 1s linear infinite;
+.app-ui:hover img:nth-child(2) {
+  transform: translate(80px, -80px);
+  opacity: 0.4;
 }
-.front h2 {
-  margin-top: 0;
+.app-ui:hover img:nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 0.6;
 }
-.back {
-  background-color: #fff;
-  color: #000;
-  height: inherit;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  opacity: 0;
-  border-radius: 0 0 5px 5px;
-}
-.back a {
-  background-color: yellowgreen;
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 13px;
-}
-.back a:hover {
-  background-color: #000;
-}
-.item:hover .front {
-  top: -50%;
-}
-.item:hover .back {
-  top: 50%;
-  opacity: 1;
-}
-
-@keyframes ani {
-  0%,
-  100% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+.app-ui:hover img:nth-child(4) {
+  transform: translate(160px, -160px);
 }
