@@ -1,12 +1,16 @@
 /* Google Web Font */
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 body {
   font-family: 'Raleway', sans-serif;
   line-height: 1.5em;
   margin: 0;
   font-weight: 300;
   color: #222;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,27 +21,36 @@ a {
   color: #222;
 }
 
-.gnb a {
+.gnb {
+  list-style: none;
+  padding: 0;
+  padding: 0;
+  width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  display: flex;
 }
-.gnb a:before {
-  content: '01';
-  background-color: royalblue;
-  color: #fff;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
+.gnb li {
+  flex: 1;
   text-align: center;
-  line-height: 20px;
-  border-radius: 50%;
-  margin-right: 5px;
-  font-size: 12px;
 }
-.gnb a:after {
-  content: 'update';
-  font-size: 12px;
-  background-color: crimson;
-  color: #fff;
-  margin-left: 5px;
-  padding: 2px;
-  border-radius: 3px;
+.gnb li a {
+  font-size: 14px;
+  position: relative;
+}
+.gnb li a:before {
+  content: '';
+  position: absolute;
+  background-color: dodgerblue;
+  height: 2px;
+  width: 0;
+  bottom: -10px;
+  transition: 0.5s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gnb li a:hover:before {
+  width: 100%;
 }
