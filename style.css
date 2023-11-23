@@ -1,79 +1,86 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 body {
   font-family: 'Raleway', sans-serif;
   line-height: 1.5em;
   margin: 0;
-  background-color: #fff;
 }
 a {
   text-decoration: none;
 }
 
-.skill-progress {
-  width: 500px;
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+.gallery li {
+  border-right: 5px solid #000;
+  flex: 1;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.gallery li:last-child {
+  border-right: none;
+}
+.gallery li:nth-child(1) {
+  background: url(images/artistic-image-01.jpg) no-repeat center center;
+}
+.gallery li:nth-child(2) {
+  background: url(images/artistic-image-02.jpg) no-repeat center center;
+}
+.gallery li:nth-child(3) {
+  background: url(images/artistic-image-03.jpg) no-repeat center center;
+}
+.gallery li:nth-child(4) {
+  background: url(images/artistic-image-04.jpg) no-repeat center center;
+}
+.gallery li:nth-child(5) {
+  background: url(images/artistic-image-05.jpg) no-repeat center center;
+}
+
+.gallery:hover li {
+  flex: 1;
+}
+.gallery li:hover {
+  flex: 3;
+  filter: grayscale(1);
+}
+
+.content {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  height: 250px;
+  bottom: -320px;
+  transition: 0.5s;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #333;
-  border-radius: 10px;
-  color: #fff;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+  padding-top: 50px;
+  width: 100%;
+}
+.sns a {
+  color: #333;
+}
+
+.gallery li:hover .content {
+  bottom: 0;
+  transition-delay: 0.5s;
+}
+.content:before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.skill-progress h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 40px;
-  font-weight: normal;
-}
-.item {
-}
-.item p {
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-.item p span:first-child {
-  float: left;
-}
-.item p span:last-child {
-  float: right;
-}
-.progress {
-  border: 1px solid #6cd4c4;
-  padding: 5px;
-  border-radius: 3px;
-}
-.progress-level {
-  height: 10px;
-  background: linear-gradient(to right, #fa709a, #fee140);
-  /*animation-name: ani;
-  animation-duration: 1s;
-  animation-iteration-count: 1;*/
-  animation: ani 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes ani {
-  0% {
-    width: 0;
-  }
-}
-
-.skill-progress .item:nth-of-type(1) .progress-level {
-  animation-delay: 0s;
-}
-.skill-progress .item:nth-of-type(2) .progress-level {
-  animation-delay: 0.2s;
-}
-.skill-progress .item:nth-of-type(3) .progress-level {
-  animation-delay: 0.4s;
-}
-.skill-progress .item:nth-of-type(4) .progress-level {
-  animation-delay: 0.6s;
-}
-.skill-progress .item:nth-of-type(5) .progress-level {
-  animation-delay: 0.8s;
+  background-color: #000;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: -10px;
+  transform-origin: left bottom;
+  transform: rotate(-3deg) scale(1.3);
 }
